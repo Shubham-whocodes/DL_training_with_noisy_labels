@@ -1,7 +1,7 @@
-train_path: /home/ec2-user/SageMaker/Grammar_modelling/dataset/Final_training_dataset_grammar_modelling.csv
-test_path: /home/ec2-user/SageMaker/Grammar_modelling/dataset/Final_test_dataset_grammar_modelling.csv
+train_path: path/to/dataset
+test_path: path/to/dataset
 
-outdir: /home/ec2-user/SageMaker/Grammar_modelling/Fine_Tuned_models/models/Electra_base_1e4
+outdir: path/to/output_dir
 
 train_batch_size: 16    
 bert_hidden_dim: 768   
@@ -20,17 +20,16 @@ evi_num: 8
 src_flag: False
 hyp_flag: False
 
-bert_pretrain: /home/ec2-user/SageMaker/electra_model
+bert_pretrain: path/to/pre_trained_model
 
-# model_name: bert
-model_name: electra
+model_name: bert
 
 learning_rate: 0.0001
 num_train_epochs: 100
-gradient_accumulation_steps: 6  
+gradient_accumulation_steps: 8 
 
 cuda : True
 
-wandb_key: 584e51608456fd25214b6b929ce02762bfcba3a4
-wandb_proj_name: Grammar_modelling
-wandb_run_name: Electra_base_1e4
+wandb_key: wandb_key
+wandb_proj_name: Project_name
+wandb_run_name: Run_name
